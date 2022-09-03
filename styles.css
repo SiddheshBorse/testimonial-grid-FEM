@@ -1,0 +1,121 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@500;600&display=swap');
+:root{
+    --pr-mod-voilet:hsl(263, 55%, 52%);
+    --pr-very-dark-greyish-blue:hsl(217, 19%, 35%);
+    --pr-very-dark-blackish-blue:hsl(219, 29%, 14%);
+    --white:#ffffff;
+    --ntl-light-gray: hsl(0, 0%, 81%);
+    --ntl-light-grayish-blue:hsl(210, 46%, 95%);
+}
+.pr-mod-voilet{
+    background-color: var(--pr-mod-voilet);
+}
+.pr-greyish-blue{
+    background-color: var(--pr-very-dark-greyish-blue);
+}
+.pr-blackish-blue{
+    background-color: var(--pr-very-dark-blackish-blue);
+}
+.white{
+    color: #ffffff;
+}
+.ntl-light-grey{
+    background-color: var(--ntl-light-gray);
+}
+.ntl-light-greyish-blue{
+    background-color: var(--ntl-light-grayish-blue);
+}
+body{
+    background-color: var(--ntl-light-grayish-blue);
+    padding: 20%;
+    padding-top: 12em;
+    padding-bottom: 0;
+    font-size: 12px;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Barlow Semi Condensed', sans-serif;
+}
+img{
+    border-radius: 50%;
+    overflow: hidden;
+}
+.quotation{
+    background-image: url(./images/bg-pattern-quotation.svg);
+    background-position: top right 10%;
+    background-repeat: no-repeat;
+}
+.testimonial-card{
+    padding: 2em;
+    padding-top: 1em;
+    border-radius: 0.5rem;
+}
+.details{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.persondetails{
+    display: flex;
+    flex-direction: column;
+    font-size: 1em;
+    
+}
+.title{
+    font-size: 1.5em;
+    margin-bottom: 1em;
+}
+.description{
+    opacity: 50%;
+}
+.details img{
+    width: 2.5em;
+    margin: 1em;
+    margin-left: 0;
+}
+.position{
+    opacity:50%;
+}
+.testimonial-grid{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap: 1rem;
+}
+.grid-col-span-2{
+    grid-column: span 2;
+}
+.testimonial-card:last-child{
+    grid-column-start: 4;
+    grid-column-end: 5;
+    grid-row-start: 1;
+    grid-row-end: 3;
+}
+@media only screen and (max-width: 1100px) {
+    .testimonial-grid{
+        display: flex;
+        flex-direction: column;
+    }
+    
+}
+@media only screen and (max-width: 650px) {
+.testimonial-grid {
+        display: flex;
+        flex-direction: column;
+    }
+    body{
+        padding: 15%;
+    }
+}
+@media only screen and (max-width: 400px) {
+    .testimonial-grid {
+        display: flex;
+        flex-direction: column;
+    }
+
+    body {
+        padding:10%;
+        padding-top: 5%;
+    }
+}
